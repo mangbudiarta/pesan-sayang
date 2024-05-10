@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesan Sayang 💌</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="loader">
+    <div class="box-loader">
+      <div class="heart-loader"></div>
+      <p>Tunggu yak....</p>
+    </div>
+    <div class="container konten">
+      <h2>Ada pesan dari Budi</h2>
+      <img
+        src="img/love-letter.svg"
+        alt="pesan"
+        onclick="bukaPesan()"
+        class="pesan-img"
+      />
+      <p>Tekan untuk membuka</p>
+    </div>
+    <div class="container isiPesan" hidden>
+      <p>Makasi sayang</p>
+      <textarea class="pesan" disabled></textarea>
+      <button onclick="balasPesan()" class="btn-primary btnWa" hidden>
+        Balas Pesan 💌
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
