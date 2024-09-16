@@ -21,7 +21,7 @@ function balasPesan() {
 
 let isiSurat = document.querySelector(".pesan");
 let ucapanSurat =
-  "Halo ayang, aku memang bukan orang yang romantis, tapi selamat ulang tahun sayangg 😘❤️";
+  "Halo sayang, meskipun aku kurang romantis, tapi setiap detik bersamamu adalah hal yang berharga. Selamat ulang tahun! Semoga hari ini lebih manis dari kue ulang tahunmu! 🎂💕";
 let i = 0;
 let speed = 90;
 isiSurat.value = "";
@@ -34,3 +34,4 @@ function ketikSurat() {
     document.querySelector(".btnWa").classList.add("show");
   }
 }
+// Copyright © 2024 Budiarta. All rights reserved.
