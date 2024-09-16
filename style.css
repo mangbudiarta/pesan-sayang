@@ -1,14 +1,16 @@
-html {
+* {
   padding: 0;
   margin: 0;
+  font-family: "Dancing Script", cursive;
 }
 
 .container {
   padding: 0 20px;
   text-align: center;
+  margin: 0 auto;
 }
 
-.loader {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +19,31 @@ html {
 
 .box-loader {
   display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pesan-img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
   animation: heartbeat 1s infinite linear;
+}
+
+textarea.pesan {
+  width: 100%;
+  height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  background: url("img/paper.png") center/cover no-repeat;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  resize: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .heart-loader {
@@ -28,6 +51,36 @@ html {
   height: 100px;
   background: url("img/heart.svg") center/contain no-repeat;
   animation: flip 1.8s infinite;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #f06;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #d0055d;
+  transform: scale(1.05);
+}
+
+.btnWa {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.btnWa.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 @keyframes heartbeat {

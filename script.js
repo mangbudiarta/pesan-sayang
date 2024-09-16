@@ -2,10 +2,10 @@ function bukaPesan() {
   const konten = document.querySelector(".konten");
   const isiPesan = document.querySelector(".isiPesan");
   const loader = document.querySelector(".box-loader");
-  loader.style.display = "block";
+  loader.style.display = "flex";
   konten.style.display = "none";
   setTimeout(() => {
-    isiPesan.removeAttribute("hidden");
+    isiPesan.style.display = "block";
     loader.style.display = "none";
   }, 2500);
   setTimeout(ketikSurat, 1000);
@@ -13,7 +13,10 @@ function bukaPesan() {
 
 function balasPesan() {
   const pesanWhatsapp = "Aku sayang budi💕 ";
-  window.open("https://wa.me/+6283114123271?text=" + pesanWhatsapp, "_blank");
+  window.open(
+    "https://wa.me/+6283114123271?text=" + encodeURIComponent(pesanWhatsapp),
+    "_blank"
+  );
 }
 
 let isiSurat = document.querySelector(".pesan");
@@ -28,6 +31,6 @@ function ketikSurat() {
     i++;
     setTimeout(ketikSurat, speed);
   } else {
-    document.querySelector(".btnWa").removeAttribute("hidden");
+    document.querySelector(".btnWa").classList.add("show");
   }
 }
